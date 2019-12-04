@@ -1,0 +1,55 @@
+GET http://localhost:8080/person/api/person
+Accept: application/xml
+
+
+###
+
+
+GET http://localhost:8080/person/api/person?name=Susi
+
+###
+
+GET http://localhost:8080/person/api/person/demo
+Accept: application/json
+
+###
+
+GET http://localhost:8080/person/api/person/demo
+Accept: application/xml
+
+###
+
+POST http://localhost:8080/person/api/person
+Content-Type: application/json
+
+  {
+    "dob": "1999-08-21",
+    "name": "Haris"
+  }
+
+###
+
+POST http://localhost:8080/person/api/person
+Content-Type: application/json
+
+[
+{
+  "dob": "2001-10-07",
+  "name": "Chiara"
+},
+  {
+  "dob": "2002-03-23",
+  "name": "Christoph"
+}
+]
+
+### dob fehlt im Json Object
+
+POST http://localhost:8080/person/api/person/x
+Content-Type: application/json
+
+{
+  "name": "Haris"
+}
+
+###

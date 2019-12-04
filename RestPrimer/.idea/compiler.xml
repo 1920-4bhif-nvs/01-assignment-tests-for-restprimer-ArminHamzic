@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="RestPrimer" />
+        <module name="restprimer" />
       </profile>
     </annotationProcessing>
   </component>
