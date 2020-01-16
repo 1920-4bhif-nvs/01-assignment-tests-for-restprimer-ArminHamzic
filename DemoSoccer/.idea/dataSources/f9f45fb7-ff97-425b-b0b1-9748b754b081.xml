@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="db@localhost">
+  <database-model serializer="dbm" dbms="DERBY" family-id="DERBY" format-version="4.17">
+    <root id="1">
+      <ServerVersion>10.14.2.0</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="APP">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="NULLID"/>
+    <schema id="4" parent="1" name="SQLJ"/>
+    <schema id="5" parent="1" name="SYS"/>
+    <schema id="6" parent="1" name="SYSCAT"/>
+    <schema id="7" parent="1" name="SYSCS_DIAG"/>
+    <schema id="8" parent="1" name="SYSCS_UTIL"/>
+    <schema id="9" parent="1" name="SYSFUN"/>
+    <schema id="10" parent="1" name="SYSIBM"/>
+    <schema id="11" parent="1" name="SYSPROC"/>
+    <schema id="12" parent="1" name="SYSSTAT"/>
+    <table id="13" parent="2" name="MATCHES"/>
+    <table id="14" parent="2" name="PERSON"/>
+    <table id="15" parent="2" name="TEAM"/>
+    <column id="16" parent="13" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="13" name="GOALSTEAM1">
+      <Position>2</Position>
+      <DataType>INTEGER|4s</DataType>
+    </column>
+    <column id="18" parent="13" name="GOALSTEAM2">
+      <Position>3</Position>
+      <DataType>INTEGER|4s</DataType>
+    </column>
+    <column id="19" parent="13" name="MATCHDAY">
+      <Position>4</Position>
+      <DataType>INTEGER|4s</DataType>
+    </column>
+    <column id="20" parent="13" name="TEAM1_ID">
+      <Position>5</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <column id="21" parent="13" name="TEAM2_ID">
+      <Position>6</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <index id="22" parent="13" name="SQL191212123955470">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="23" parent="13" name="SQL191212123955500">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TEAM1_ID</ColNames>
+    </index>
+    <index id="24" parent="13" name="SQL191212123955520">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TEAM2_ID</ColNames>
+    </index>
+    <key id="25" parent="13" name="SQL191212123955470">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="26" parent="13" name="FKOYHOC07ISWWR5FCQ47L8I84DT">
+      <ColNames>TEAM1_ID</ColNames>
+      <RefTableName>TEAM</RefTableName>
+      <RefKeyName>SQL191212123955490</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="27" parent="13" name="FKD4DMVX40B7DJENHQY4YW8OEVK">
+      <ColNames>TEAM2_ID</ColNames>
+      <RefTableName>TEAM</RefTableName>
+      <RefKeyName>SQL191212123955490</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="28" parent="14" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
+    </column>
+    <column id="29" parent="14" name="CITY">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="30" parent="14" name="DICK">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="31" parent="14" name="NAME">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="32" parent="14" name="SQL191212111626980">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="33" parent="14" name="SQL191212111626980">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="15" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="15" name="SHORTNAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="36" parent="15" name="TEAMNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="37" parent="15" name="SQL191212123955490">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="15" name="SQL191212123955490">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
