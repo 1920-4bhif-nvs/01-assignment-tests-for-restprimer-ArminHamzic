@@ -1,0 +1,32 @@
+GET http://localhost:8080/school/all
+
+###
+
+GET http://localhost:8080/school/1
+
+###
+
+DELETE http://localhost:8080/school/2
+
+###
+
+POST http://localhost:8080/school
+Content-Type: application/json
+
+{
+  "name": "HTL-Leonding",
+  "students": "32"
+}
+
+###
+
+PUT http://localhost:8080/school/4
+Content-Type: application/json
+
+{
+  "name": "LALALALLA",
+  "students": "32"
+}
+
+###
+
